@@ -37,8 +37,8 @@ def contact():
     form=ContactForm()
     if request.method=='POST':
         if form.validate_on_submit():
-            msg = Message(request.form['subject'], sender=("John Brown",
-            "johnbrown@gmail.com"),recipients=request.form['email'])
+            msg = Message(request.form['subject'], sender=("Mailtrap",
+            "e07e4505cc-91749c+1@inbox.mailtrap.io"),recipients=request.form['email'])
             msg.body = request.form['messgae']
             mail.send(msg)
             flash('Email successfully sent.')
